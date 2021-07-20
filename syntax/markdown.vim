@@ -349,10 +349,6 @@ execute 'syn match markdownTable '
   \ .   '$'
   \ . '/'
 syn match markdownTableDelimiter /|/ contained
-execute 'syn match markdownTableDelimiter contained '
-  \ . '/' . s:markdown_table_header_rows_separator . '/'
-execute 'syn match markdownTableHeader contained contains=@markdownInline '
-  \ . '/\%(|\?\s*\)\@<=[^|]\+\%(.*\n' . s:markdown_table_header_rows_separator . '\)\@=/'
 
 " }}}
 
